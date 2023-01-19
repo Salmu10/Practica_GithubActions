@@ -17,6 +17,7 @@ jobs:
     needs: linter-job
     steps:
       - uses: actions/checkout@v3
+      - run: npm install
       - uses: cypress-io/github-action@v5
         with:
           build: npm run build
