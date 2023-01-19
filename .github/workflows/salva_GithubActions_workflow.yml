@@ -39,9 +39,10 @@ jobs:
         with:
           name: result.txt
       - run: echo "::set-output name=cypress_outcome::$(cat result.txt)"
+        id: cypress_result
       - uses: ./.github/actions/add_badge
         with:
-          cypress_result: ${{steps.res_cypress.outputs.cypress_outcome}} 
+          cypress_result: ${{steps.cypress_result.outputs.cypress_outcome}} 
       - uses: EndBug/add-and-commit@v9
         with:
           add: "."
