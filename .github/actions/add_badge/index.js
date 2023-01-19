@@ -5,6 +5,7 @@ async function add_badge() {
 
     try {
         const res = core.getInput('cypress_result');
+        
         const test_fail = 'https://img.shields.io/badge/test-failure-red';
         const test_success = 'https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg';
 
