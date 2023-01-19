@@ -25,3 +25,7 @@ jobs:
         id: res_cypress
         continue-on-error: true
       - run: echo ${{steps.res_cypress.outcome}} > result.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: result.txt
+          path: result.txt
