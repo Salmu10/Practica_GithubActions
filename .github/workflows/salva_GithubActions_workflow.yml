@@ -19,6 +19,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: cypress-io/github-action@v5
         with:
+        build: npm run build
           start: npm run start
         id: res_cypress
+        continue-on-error: true
       - run: echo ${{steps.res_cypress.outcome}} > result.txt
