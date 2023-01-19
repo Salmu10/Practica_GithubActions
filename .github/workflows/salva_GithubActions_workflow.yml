@@ -1,0 +1,13 @@
+name: salva_GithubActions
+on: 
+  push:
+   branches:
+    - main
+jobs:
+  linter-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install -D
+      - name: execute linter
+        run: npm run lint
