@@ -1,0 +1,9 @@
+name: "action add badge"
+description: "Update the README with cypress test result"
+inputs:
+  cypress_result:
+    description: "Cypress test result"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"
