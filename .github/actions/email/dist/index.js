@@ -4408,7 +4408,7 @@ const body =`<div>
 mg.messages.create(domain, {
     from: "salmu1997@gmail.com",
     to: [destinatario],
-    subject: asunto,
+    subject: "Resultado del workflow ejecutado",
     html: body
 })
 .then(msg => console.log(msg))
