@@ -61,3 +61,19 @@ jobs:
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
           working-directory: ./
+
+  Notification_job:
+    runs-on: ubuntu-latest
+    needs: [linter-job, Cypress_job, Add_badge_job, Deploy_job]
+    if: always()
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/email
+        with:
+          linter_job: ${{ needs.linter-job.result }}
+          cypress_job: ${{ needs.Cypress_job.result }}
+          add_badge_job: ${{ needs.Add_badge_job.result }}
+          deploy_job: ${{ needs.Deploy_job.result }}
+          destinatario: "salmu1997@gmail.com"
+          API_KEY: ${{ secrets.API_KEY_MAILGUN }}
+          DOMAIN: ${{ secrets.DOMAIN_KEY_MAILGUN }}

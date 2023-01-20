@@ -1,0 +1,28 @@
+name: 'send email'
+description: 'Email con el resultado del workflow'
+inputs:
+  linter_job: 
+    description: 'Result of linter job'
+    required: true
+  cypress_job: 
+    description: 'Result of cypress job'
+    required: true
+  add_badge_job: 
+    description: 'Result of add badge job'
+    required: true
+  deploy_job: 
+    description: 'Result of deploy job'
+    required: true
+  destinatario:
+    description: 'Email receiver'
+    required: true
+  API_KEY:
+    description: 'Api key de mailgun'
+    required: true
+  DOMAIN:
+    description: 'Domain de mailgun'
+    required: true
+  
+runs:
+  using: "node16"
+  main: "dist/index.js"
