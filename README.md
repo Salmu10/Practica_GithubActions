@@ -2,7 +2,13 @@
 
 Realizada por [`Salva Muñoz Úbeda`](https://github.com/salmu10)
 
-# EXPLICACIÓN TEÓRICA
+## ¿QUÉ ES GITHUB ACTIONS?
+
+GitHub Actions es una herramienta que permite reducir la cadena de acciones necesaria para la ejecución de código, mediante la creación de un de flujo de trabajo encargado del Pipeline. Siendo configurable para que GitHub reaccione a ciertos eventos de forma automática según nuestras preferencias.
+
+Por lo tanto, GitHub Actions permite crear workflows que se puedan utilizar para compilar, testear y desplegar código. Además, da la posibilidad de crear flujos de integración y despliegue continuo dentro de nuestro repositorio.
+
+# PRÁCTICA
 
 Primeramente, hacemos un “git clone” del repositorio que se nos proporciona en la práctica.
 
